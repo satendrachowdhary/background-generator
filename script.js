@@ -21,22 +21,22 @@ randombtn.addEventListener("click", () => {
   
 
   var r2 = generateRandomNumber();
-  var rhex2 = rgbToHex(r2);
+  
 
   var g = generateRandomNumber();
   
 
   var g2 = generateRandomNumber();
-  var ghex2 = rgbToHex(g2);
+  
 
   var b = generateRandomNumber();
   
 
   var b2 = generateRandomNumber();
-  var bhex2 = rgbToHex(b2);
+  
 
   color1.value = `rgb(${r}${g}${b}`;
-  color2.value = `#${rhex2}${ghex2}${bhex2}`;
+  color2.value = `rgb(${r2}${g2}${b2}`;
 
   body.style.background = ` linear-gradient(to right, ${color1.value} , ${
     color2.value

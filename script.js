@@ -8,28 +8,47 @@ function generateRandomNumber() {
   return Math.ceil(Math.random() * 255);
 }
 
+function decimalToHex(d, padding) {
+  var hex = Number(d).toString(16);
+  padding =
+    typeof padding === "undefined" || padding === null
+      ? (padding = 2)
+      : padding;
+
+  while (hex.length < padding) {
+    hex = "0" + hex;
+  }
+
+  return hex;
+}
+
 randombtn.addEventListener("click", () => {
-  var r = generateRandomNumber(); 
-  var r2 = generateRandomNumber();  
+  var r = generateRandomNumber();
+  var rhex = decimalToHex(r);
+
+  var r2 = generateRandomNumber();
+  var r2hex = decimalToHex(r2);
 
   var g = generateRandomNumber();
-  var g2 = generateRandomNumber();  
+  var ghex = decimalToHex(g);
+
+  var g2 = generateRandomNumber();
+  var g2hex = decimalToHex(g2);
 
   var b = generateRandomNumber();
-  var b2 = generateRandomNumber();  
+  var bhex = decimalToHex(b);
 
-  color1.value = `rgb(${r}${g}${b}`;
-  color2.value = `rgb(${r2}${g2}${b2}`;
+  var b2 = generateRandomNumber();
+  var b2hex = decimalToHex(b2);
 
-  body.style.background = ` linear-gradient(to right, ${color1.value} , ${
-    color2.value
-  })`;
+  color1.value = `#${rhex}${ghex}${bhex}`;
+  color2.value = `#${r2hex}${g2hex}${b2hex}`;
+
+  body.style.background = ` linear-gradient(to right, ${color1.value} , ${color2.value})`;
   css.textContent = body.style.background + ";";
 });
 
-body.style.background = ` linear-gradient(to right, ${color1.value} , ${
-  color2.value
-})`;
+body.style.background = ` linear-gradient(to right, ${color1.value} , ${color2.value})`;
 css.textContent = body.style.background + ";";
 
 function setGradient() {

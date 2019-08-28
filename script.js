@@ -8,32 +8,15 @@ function generateRandomNumber() {
   return Math.ceil(Math.random() * 255);
 }
 
-var rgbToHex = function(rgb) {
-  var hex = Number(rgb).toString(16);
-  if (hex.length < 2) {
-    hex = "0" + hex;
-  }
-  return hex;
-};
-
 randombtn.addEventListener("click", () => {
-  var r = generateRandomNumber();
-  
-
-  var r2 = generateRandomNumber();
-  
+  var r = generateRandomNumber(); 
+  var r2 = generateRandomNumber();  
 
   var g = generateRandomNumber();
-  
-
-  var g2 = generateRandomNumber();
-  
+  var g2 = generateRandomNumber();  
 
   var b = generateRandomNumber();
-  
-
-  var b2 = generateRandomNumber();
-  
+  var b2 = generateRandomNumber();  
 
   color1.value = `rgb(${r}${g}${b}`;
   color2.value = `rgb(${r2}${g2}${b2}`;

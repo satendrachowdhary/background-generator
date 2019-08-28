@@ -18,24 +18,24 @@ var rgbToHex = function(rgb) {
 
 randombtn.addEventListener("click", () => {
   var r = generateRandomNumber();
-  var rhex = rgbToHex(r);
+  
 
   var r2 = generateRandomNumber();
   var rhex2 = rgbToHex(r2);
 
   var g = generateRandomNumber();
-  var ghex = rgbToHex(g);
+  
 
   var g2 = generateRandomNumber();
   var ghex2 = rgbToHex(g2);
 
   var b = generateRandomNumber();
-  var bhex = rgbToHex(b);
+  
 
   var b2 = generateRandomNumber();
   var bhex2 = rgbToHex(b2);
 
-  color1.value = `#${rhex}${ghex}${bhex}`;
+  color1.value = `rgb(${r}${g}${b}`;
   color2.value = `#${rhex2}${ghex2}${bhex2}`;
 
   body.style.background = ` linear-gradient(to right, ${color1.value} , ${

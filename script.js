@@ -1,3 +1,8 @@
+// var _ = require("lodash");
+
+// var arr = [1, 2, 3];
+// console.log(_.without(arr, 2));
+
 var css = document.querySelector("#bg-code");
 var color1 = document.querySelector(".color1");
 var color2 = document.querySelector(".color2");

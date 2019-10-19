@@ -1,8 +1,3 @@
-// var _ = require("lodash");
-
-// var arr = [1, 2, 3];
-// console.log(_.without(arr, 2));
-
 var css = document.querySelector("#bg-code");
 var color1 = document.querySelector(".color1");
 var color2 = document.querySelector(".color2");
@@ -58,7 +53,7 @@ css.textContent = body.style.background + ";";
 
 function setGradient() {
   body.style.background =
-    "linear-gradient(to right, " + color1.value + ", " + color2.value + ")";
+    ` linear-gradient(to right, ${color1.value} , ${color2.value})`;
 
   css.textContent = body.style.background + ";";
 }

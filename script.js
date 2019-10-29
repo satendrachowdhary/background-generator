@@ -52,8 +52,7 @@ body.style.background = ` linear-gradient(to right, ${color1.value} , ${color2.v
 css.textContent = body.style.background + ";";
 
 function setGradient() {
-  body.style.background =
-    ` linear-gradient(to right, ${color1.value} , ${color2.value})`;
+  body.style.background = ` linear-gradient(to right, ${color1.value} , ${color2.value})`;
 
   css.textContent = body.style.background + ";";
 }

@@ -8,12 +8,9 @@ function generateRandomNumber() {
   return Math.ceil(Math.random() * 255);
 }
 
-function decimalToHex(d, padding) {
+function decimalToHex(d) {
   var hex = Number(d).toString(16);
-  padding =
-    typeof padding === "undefined" || padding === null
-      ? (padding = 2)
-      : padding;
+  var padding = 2;
 
   while (hex.length < padding) {
     hex = "0" + hex;
